@@ -1,0 +1,301 @@
+{
+  "country": "ch",
+  "provider": "fso",
+  "dataset": "indpau",
+  "title": {
+    "en": "Secondary Sector Production, Orders and Turnover Statistics - monthly series",
+    "de": "Produktions-, Auftrags- und Umsatzstatistik im sekundären Sektor - monatliche Zeitreihen",
+    "fr": "Statistique de la production, des commandes et des chiffres d'affaires secteur secondaire - séries mensuelles",
+    "it": "Statistica della produzione, delle ordinazioni e delle cifre d'affari del settore secondario - serie mensile"
+  },
+  "source_name": {
+    "en": "FSO",
+    "de": "BFS",
+    "fr": "OFS",
+    "it": "UST"
+  },
+  "source_url": "https://www.fso.admin.ch",
+  "dataset_frequency": "M",
+  "units": {
+    "all": {
+      "en": "Percent",
+      "de": "Prozent",
+      "fr": "Pourcent",
+      "it": "Percentuale"
+    }
+  },
+  "aggregate": {
+    "all": "sum"
+  },
+  "dim_order": [
+    "trans",
+    "var",
+    "section",
+    "seas"
+  ],
+  "hierarchy": {
+    "seas": {
+      "brut": {},
+      "ca": {},
+      "sa": {}
+    },
+    "trans": {
+      "ind": {},
+      "var": {}
+    },
+    "var": {
+      "ptot": {},
+      "uexp": {},
+      "uinl": {},
+      "utot": {}
+    },
+    "section": {
+      "ind": {
+        "b": {},
+        "c": {
+          "c1012": {},
+          "c1315": {},
+          "c1618": {},
+          "c1920": {},
+          "c21": {},
+          "c2223": {},
+          "c2425": {},
+          "c26": {},
+          "c27": {},
+          "c28": {},
+          "c2930": {},
+          "c3133": {}
+        },
+        "d": {}
+      },
+      "migig": {},
+      "migcg": {},
+      "migcd": {},
+      "migcn": {},
+      "migen": {}
+    }
+  },
+  "labels": {
+    "dimnames": {
+      "seas": {
+        "en": "Adjustment",
+        "de": "Bereinigung",
+        "fr": "Ajustement",
+        "it": "Correzione"
+      },
+      "section": {
+        "en": "Branch",
+        "de": "Branche",
+        "fr": "Branche",
+        "it": "Attività"
+      },
+      "trans": {
+        "en": "Indices...Changes",
+        "de": "Indizes...Veränderungsraten",
+        "fr": "Indices...Variations",
+        "it": "Indici...Variazioni"
+      },
+      "var": {
+        "en": "Variable",
+        "de": "Variable",
+        "fr": "Variable",
+        "it": "Variabile"
+      }
+    },
+    "trans": {
+      "ind": {
+        "en": "Indices",
+        "de": "Indizes",
+        "fr": "Indices",
+        "it": "Indici"
+      },
+      "var": {
+        "en": "Changes",
+        "de": "Veränderungsraten",
+        "fr": "Variations",
+        "it": "Variazioni"
+      }
+    },
+    "var": {
+      "ptot": {
+        "en": "Production",
+        "de": "Produktion",
+        "fr": "Production",
+        "it": "Produzione"
+      },
+      "uexp": {
+        "en": "Foreign turnover",
+        "de": "Auslandumsatz",
+        "fr": "Chiffre d'affaires à l'extérieur",
+        "it": "Cifre d'affari all'estero"
+      },
+      "uinl": {
+        "en": "Domestic turnover",
+        "de": "Inlandumsatz",
+        "fr": "Chiffre d'affaires à l'intérieur",
+        "it": "Cifre d'affari sul mercato interno"
+      },
+      "utot": {
+        "en": "Total turnover",
+        "de": "Gesamtumsatz",
+        "fr": "Chiffre d'affaires total",
+        "it": "Chifre d'affari totali"
+      }
+    },
+    "section": {
+      "b": {
+        "en": "B Mining and quarrying",
+        "de": "B Bergbau und Gewinnung von Steinen und Erden",
+        "fr": "B Industries extractives",
+        "it": "B Attività estrattive"
+      },
+      "c": {
+        "en": "C Manufacturing",
+        "de": "C Verarbeitendes Gewerbe/Herstellung von Waren",
+        "fr": "C Industrie manufacturière",
+        "it": "C Attività manifatturiere"
+      },
+      "c1012": {
+        "en": "10-12 Manufacture of food and tobacco products",
+        "de": "10-12 Herstellung von Nahrungsmitteln und Tabakerzeugnissen",
+        "fr": "10-12 Industries alimentaires et du tabac",
+        "it": "10-12 Industrie alimentari e del tabacco"
+      },
+      "c1315": {
+        "en": "13-15 Manufacture of textiles and apparel",
+        "de": "13-15 Herstellung von Textilien und Bekleidung",
+        "fr": "13-15 Industries du textile et de l'habillement",
+        "it": "13-15 Fabbricazione di tessili e abbigliamento"
+      },
+      "c1618": {
+        "en": "16-18 Manufacture of wood and paper products, and printing",
+        "de": "16-18 Herstellung von Holzwaren, Papier und Druckerzeugnissen",
+        "fr": "16-18 Industries du bois et du papier; imprimerie",
+        "it": "16-18 Industria del legno, industria della carta e stampa"
+      },
+      "c1920": {
+        "en": "19-20 Manufacture of coke, chemicals and chemical products",
+        "de": "19-20 Kokerei, Mineralölverarbeitung und Herstellung von chemischen Erzeugnissen",
+        "fr": "19-20 Cokéfaction, raffinage et industrie chimique",
+        "it": "19-20 Fabbricazione di coke e industria chimica"
+      },
+      "c21": {
+        "en": "21 Manufacture of pharmaceutical products",
+        "de": "21 Herstellung von pharmazeutischen Erzeugnissen",
+        "fr": "21 Industrie pharmaceutique",
+        "it": "21 Industria farmaceutica"
+      },
+      "c2223": {
+        "en": "22-23 Manufacture of rubber and plastics products",
+        "de": "22-23 Herstellung von Gummi- und Kunststoffwaren",
+        "fr": "22-23 Industries du caoutchouc et du plastique",
+        "it": "22-23 Industria d'articoli in gomma e in materie plastiche"
+      },
+      "c2425": {
+        "en": "24-25 Manufacture of metal products",
+        "de": "24-25 Herstellung von Metallerzeugnissen",
+        "fr": "24-25 Fabrication de produits métalliques",
+        "it": "24-25 Fabbricazione di prodotti in metallo"
+      },
+      "c26": {
+        "en": "26 Manufacture of electronic products; watches and clocks",
+        "de": "26 Herstellung von Datenverarbeitungsgeräten und Uhren",
+        "fr": "26 Fabrication de produits électroniques; horlogerie",
+        "it": "26 Fabbricazione di prodotti di elettronica; orologi"
+      },
+      "c27": {
+        "en": "27 Manufacture of electrical equipment",
+        "de": "27 Herstellung von elektrischen Ausrüstungen",
+        "fr": "27 Fabrication d'équipements électriques",
+        "it": "27 Fabbricazione di apparecchi elettrici"
+      },
+      "c28": {
+        "en": "28 Manufacture of machinery and equipment",
+        "de": "28 Maschinenbau",
+        "fr": "28 Fabrication de machines",
+        "it": "28 Fabbricazione di macchinari"
+      },
+      "c2930": {
+        "en": "29-30 Manufacture of transport equipment",
+        "de": "29-30 Fahrzeugbau",
+        "fr": "29-30 Fabrication de matériels de transport",
+        "it": "29-30 Fabbricazione di mezzi di trasporto"
+      },
+      "c3133": {
+        "en": "31-33 Other manufacturing, and repair and installation",
+        "de": "31-33 Sonstige Herstellung von Waren, Reparatur und Installation",
+        "fr": "31-33 Autres industries manufacturières; réparation et installation",
+        "it": "31-33 Altre attività manifatturiere, riparazione e installatione"
+      },
+      "d": {
+        "en": "D Electricity supply",
+        "de": "D Energieversorgung",
+        "fr": "D Production et distribution d'énergie",
+        "it": "D Fornitura di energia elettrica"
+      },
+      "ind": {
+        "en": "B-E Industry",
+        "de": "B-E Industrie",
+        "fr": "B-E Industrie",
+        "it": "B-E Industria"
+      },
+      "migcd": {
+        "en": "Consumer durables",
+        "de": "Gebrauchsgüter",
+        "fr": "Biens de consommation durables",
+        "it": "Beni di consumo durevoli"
+      },
+      "migcg": {
+        "en": "Capital goods",
+        "de": "Investitionsgüter",
+        "fr": "Biens d'investissement",
+        "it": "Beni strumentali"
+      },
+      "migcn": {
+        "en": "Consumer non-durables",
+        "de": "Verbrauchsgüter",
+        "fr": "Biens de consommation non durables",
+        "it": "Beni di consumo non durevoli"
+      },
+      "migen": {
+        "en": "Energy",
+        "de": "Energie",
+        "fr": "Energie",
+        "it": "Energia"
+      },
+      "migig": {
+        "en": "Intermediate goods",
+        "de": "Vorleistungsgüter",
+        "fr": "Biens intermédiaires",
+        "it": "Prodotti intermedi"
+      }
+    },
+    "seas": {
+      "brut": {
+        "en": "Unadjusted",
+        "de": "Unbereinigt",
+        "fr": "Brut",
+        "it": "Grezzo"
+      },
+      "ca": {
+        "en": "Adjusted for calendar effects",
+        "de": "Kalenderbereinigt",
+        "fr": "Corrigé des effets calendaires",
+        "it": "Corretto per gli effetti di calendario"
+      },
+      "sa": {
+        "en": "Seasonally adjusted",
+        "de": "Saisonbereinigt",
+        "fr": "Désaisonnalisé",
+        "it": "Destagionalizzato"
+      }
+    }
+  },
+  "details": {
+    "en": "Indices: annual average 2021=100\nChanges: year-on-year change in %; seasonally adjusted: month-on-month (quarter-on-quarter) change in %.\nThe provisional results are published 50 days and the final results 140 days (50 days + one quarter) after the end of each survey period.\nResults prior to the 4th quarter 2011 are based on the old statistic PAUL and have been transformed into the new nomenclature Noga2008.\nProduction is calculated by deflating turnover. As the Producer Price Index in its current form is only available since 2004, production cannot be calculated prior to this date.",
+    "de": "Indizes: Jahresdurchschnitt 2021=100\nVeränderungen: zum Vorjahr in %; saisonbereinigt: zur Vorperiode in %.\nDie provisorischen Ergebnisse werden 50 Tage und die definitiven Ergebnisse 140 Tage (50 Tage + ein Quartal) nach Ende jeder Erhebungsperiode publiziert.\nDie Zahlen vor dem 4.Quartal 2011 basieren auf der alten PAUL-Statistik und wurden in die neue Nomenklatur Noga2008 überführt.\nDie Produktion wird durch die Deflationierung des Umsatzes berechnet. Da der Produktionspreisindex in der heutigen Form erst seit 2004 existiert, können vor diesem Datum keine Produktionszahlen berechnet werden.",
+    "fr": "Indices: moyenne annuelle 2021=100\nVariations: par rapport à l'année précédente; désaisonnalisées: par rapport à la période précédente.\nLes résultats provisoires sont publiés 50 jours après la fin de chaque période d'enquête et les résultats définitifs après 140 jours (50 jours + un trimestre).\nLes chiffres antérieurs au 4ème trimestre 2011 se rapportent à l'ancienne statistique PAUL. Ils ont été adaptés à la nouvelle nomenclature Noga2008.\nLa production est calculée en déflatant les chiffres d'affaires. L'indice des prix à la production existe sous sa forme actuelle depuis 2004, aucun chiffre concernant la production ne peut donc être calculé avant cette date.",
+    "it": "Indici: media annua 2021=100\nVariazioni: rispetto all'anno precedente in %; destagionalizzati: rispetto al periodo precedente in %.\nI risultati provvisori sono pubblicati 50 giorni dopo la fine del periodo di rilevazione, i risultati definitivi 140 giorni (50 giorni + uno trimestre).\nI dati che precedono il 4o trimestre 2011 si basano sulla vecchia statistica PAUL e sono stati trasformati nella nuova nomenclatura Noga2008.\nLa produzione é calcolata deflazionando le cifre d'affari. L'indice dei prezzi alla produzione nella forma attuale esiste unicamente a partire dal 2004, i dati della produzione non possono pertanto essere calcolati prima di questa data."
+  },
+  "update_checksum": "71b25e48f1e2bd15293b63d5e05ce610c524070ed75bc36973336e1a526131cb"
+}

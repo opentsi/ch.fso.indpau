@@ -51,15 +51,16 @@ validate_metadata(meta) # TRUE
 
 
 ## Step 6: Seal Archive
+key <- "8faea36fd76782e88f552f6f2eed360bcea9965c2eac6c76880e425c8823f710"
 devtools::load_all()
 library(digest)
-checksum_input <- generate_checksum_input()
+checksum_input <- generate_checksum_input(key = key)
 archive_seal(checksum_input)
 
 
 ## Step 7: Final Checks & Automation
 devtools::load_all()
-handle_update()
+handle_update(key = key)
 
 library(devtools)
 check()

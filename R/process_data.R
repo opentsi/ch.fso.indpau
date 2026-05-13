@@ -1,6 +1,6 @@
-#' Process FSO BAPAU Data
+#' Process FSO INDPAU Data
 #'
-#' Fetches all time series in the ch.fso.bapau collection from the KOF
+#' Fetches all time series in the ch.fso.indpau collection from the KOF
 #' Time Series Database and writes each to its key.csv
 #'
 #' @importFrom tsdbapi read_dataset_keys set_config read_ts
@@ -25,11 +25,9 @@ process_data <- function(key = key) {
     freq <- frequency(ts_obj)
     values <- as.numeric(ts_obj)
 
-    # ch.fso.bapau is 4, nut here 12c 
     if (freq == 12) {
       years <- floor(ts_time)
-      quarters <- round((ts_time - years) * 4) + 1
-      months <- (quarters - 1L) * 3L + 1L
+      months <- round((ts_time - years) * 12) + 1
       ts_dates <- as.Date(sprintf("%d-%02d-01", years, months))
     } else {
       stop(sprintf("Unsupported frequency: %d", freq))
@@ -44,6 +42,3 @@ process_data <- function(key = key) {
   invisible(unlist(out_paths))
 }
 
-# test with key -.
-key <- "8faea36fd76782e88f552f6f2eed360bcea9965c2eac6c76880e425c8823f710"
-process_data(key)
