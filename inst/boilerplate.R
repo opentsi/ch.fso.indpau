@@ -1,17 +1,7 @@
 library(deloRean)
 library(opentimeseries)
 
-
-## Example Step 1, Init Archive, once generated make sure
-# the newly created archive is your working dir
-# outcommented because by the time you read this in boilerplate.R
-# you've already created the archive.
-# archive_init("ch.kof.globalbaro", parent_dir = )
-
-
-
 ## Example Step 2, Generate History
-
 
 library(tsdbapi)
 keys <- read_dataset_keys("ch.fso.indpau")
@@ -31,19 +21,14 @@ class(all_vintages) <- c(class(all_vintages), "tslist")
 ## Step 3: Create vintages data.table
 vintages_dt <- create_vintage_dt(vintage_dates, all_vintages)
 head(vintages_dt, n = 100)
-# View(vintages_dt)
 
-
-setwd("~/KOF_Lab/opentsi/ch.fso.indpau")
 archive_import_history(vintages_dt, repository_path = ".")
 
 
 ## Step 5: Write & Validate Metadata
 
 # check if info is available via api
-indpau_meta <- read_dataset_ts_metadata("ch.fso.indpau") # returns named list()...
-# so i fetched the metadata from swissdata...
-
+indpau_meta <- read_dataset_ts_metadata("ch.fso.indpau") 
 
 render_metadata()
 meta <- read_meta(".")
@@ -51,7 +36,7 @@ validate_metadata(meta) # TRUE
 
 
 ## Step 6: Seal Archive
-key <- "8faea36fd76782e88f552f6f2eed360bcea9965c2eac6c76880e425c8823f710"
+key <- "...."
 devtools::load_all()
 library(digest)
 checksum_input <- generate_checksum_input(key = key)
