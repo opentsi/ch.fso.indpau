@@ -1,20 +1,33 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
 
 # ch.fso.indpau
 
 [![dataset](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/opentsi/ch.fso.indpau/main/data-raw/shield.json)](https://github.com/opentsi/ch.fso.indpau/actions/workflows/update_data.yaml)
 
-The ch.fso.indpau package provides versioned time series data and their
-meta information for scientific research. In addition, the package
-contains the extract-transform-load (ETL) functionality that sources the
-data from its original provider.
+The ch.fso.indpau package provides versioned time series data
+and their meta information for scientific research.
+In addition, the package contains the
+extract-transform-load (ETL) functionality that
+sources the data from its original provider.
 
 ## Browse Time Series Data
 
-You can use GitHub’s ability to render to csv to explore the datasets
+You can use GitHub's ability to render to csv to explore the datasets
 
 ## Basic Data Consumption via opentimeseries
 
-``` r
+
+```r
 remotes::install_github("opentsi/opentimeseries")
 library(opentimeseries)
 
@@ -26,13 +39,12 @@ ts <- read_open_ts(
 
 ts
 ```
-
 Given a unique time series identifier and a GitHub repo,
 *opentimeseries* will return a time series and long format `data.table`.
 
 ## Basic Usage
 
-``` r
+```{r, eval=FALSE}
 ts <- read_open_ts(
   remote_archive = "opentsi/ch.fso.indpau"
 )
@@ -43,10 +55,10 @@ but the most recent one. The *opentimeseries* package will simply select
 the most recent release that was available at the selected date.
 
 Because time series data can get revised, storing vintages is important
-to monitor data revisions and benchmark forecasts. Here’s a quick visual
+to monitor data revisions and benchmark forecasts. Here's a quick visual
 comparison:
 
-``` r
+```{r}
 library(opentimeseries)
 library(tsbox)
 
@@ -60,7 +72,5 @@ ts202307 <- read_open_ts(series = "var.utot.ind.brut",
 ts202307$id <- "var.utot.ind.brut.202307"
 ts$id <- sprintf("var.utot.ind.brut.202606")
 ts_plot(rbind(ts202307, ts))
-#> [time]: 'date'
 ```
 
-![](man/figures/README-unnamed-chunk-3-1.png)<!-- -->

@@ -39,7 +39,7 @@ generate_checksum_input <- function(key = key){
   # need to include user via session
   set_config(api_key = key)
   # hardcoded, maybe not so good
-  sample_key <- "ch.fso.indpau.ind.ptot.b.brut"
+  sample_key <- "ind.ptot.c1012.sa"
   ts <- read_ts(ts_keys = sample_key)
   return(ts)
 }
